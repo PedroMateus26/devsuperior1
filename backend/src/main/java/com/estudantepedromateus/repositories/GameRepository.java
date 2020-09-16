@@ -1,9 +1,11 @@
 package com.estudantepedromateus.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import com.estudantepedromateus.entities.Games;
+import com.estudantepedromateus.entities.Game;
 
-public interface GameRepository extends JpaRepository<Games, Long>{
+@Repository
+public interface GameRepository extends JpaRepository<Game, Long>{
 
 }

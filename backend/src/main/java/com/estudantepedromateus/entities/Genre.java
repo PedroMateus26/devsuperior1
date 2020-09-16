@@ -23,7 +23,7 @@ public class Genre implements Serializable{
 	private String name;
 	
 	@OneToMany(mappedBy="genre")
-	private List<Games> list = new ArrayList<>();
+	private List<Game> list = new ArrayList<>();
 	
 	public Genre() {
 	}
@@ -50,7 +50,7 @@ public class Genre implements Serializable{
 		this.name = name;
 	}
 
-	public List<Games> getList() {
+	public List<Game> getList() {
 		return list;
 	}
 

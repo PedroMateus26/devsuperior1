@@ -26,7 +26,7 @@ public class Record implements Serializable{
 	
 	@ManyToOne
 	@JoinColumn(name="game_id")
-	private Games game;
+	private Game game;
 	
 	public Record() {
 	}
@@ -71,11 +71,11 @@ public class Record implements Serializable{
 		this.moment = moment;
 	}
 
-	public Games getGame() {
+	public Game getGame() {
 		return game;
 	}
 
-	public void setGame(Games game) {
+	public void setGame(Game game) {
 		this.game = game;
 	}
 

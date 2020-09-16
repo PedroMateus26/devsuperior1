@@ -14,10 +14,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.estudantepedromateus.entities.enums.Platform;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="tb_game")
-public class Games implements Serializable{
+public class Game implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -34,10 +35,10 @@ public class Games implements Serializable{
 	@OneToMany(mappedBy = "game")
 	private List<Record> list=new ArrayList<>();
 	
-	public Games() {
+	public Game() {
 	}
 
-	public Games(Long id, String title, Platform platform) {
+	public Game(Long id, String title, Platform platform) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -96,7 +97,7 @@ public class Games implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Games other = (Games) obj;
+		Game other = (Game) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
