@@ -23,7 +23,7 @@ const Charts = () => {
         series: []
     }
 
-    const BASE_URL='http://localhost:8080'
+    const BASE_URL='https://semana-devsuperior-pedromateus.herokuapp.com'
 
     const [barChartData, setBarChartData] = useState<BarChartData[]>([])
     const [platforData, setPlatforData] = useState<PieChartData>(initialPieData)
